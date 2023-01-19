@@ -13,7 +13,7 @@ def home(request):
 
 def predict_sentiment(review):
     review = [review]
-    review = cv.transform(review).toarray()
+    review = cv.transform(review).toarray() 
     sentiment = loaded_model.predict(review)
     if sentiment == 2:
         return "Positive 😀"
