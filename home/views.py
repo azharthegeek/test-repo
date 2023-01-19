@@ -3,10 +3,8 @@ from django.http import HttpResponse
 import pickle
 
 # Loading the saved model
-loaded_model = pickle.load(open(
-    'C:\\Users\\azhar\\OneDrive\\Documents\\sentiment-analysis-roman-urdu\\django deployment\\home\\spnn-model.sav', 'rb'))
-cv = pickle.load(open(
-    'C:\\Users\\azhar\\OneDrive\\Documents\\sentiment-analysis-roman-urdu\\django deployment\\home\\countvectorizer.sav', 'rb'))
+loaded_model = pickle.load(open('.\\spnn-model.sav', 'rb'))
+cv = pickle.load(open('.\\countvectorizer.sav', 'rb'))
 
 
 def home(request):
